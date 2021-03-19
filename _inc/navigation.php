@@ -1,6 +1,6 @@
 <nav>
 	<div class="logo">
-		truncate.pw
+		scutum.pw
 	</div>
 	<ul>
 		<li><a href="/">Home</a></li>
