@@ -73,7 +73,7 @@ include("_inc/header.php");
 			<p>Is leakedpassword safe?</p>
 		</div>
 		<div class="col tiny-9 medium-9">
-			<p>Check you password or string agains leakedpassword does upload your data to their servers. Use this feature at your own discretion</p>
+			<p>If you check your password or string against leakedpassword, it will be uploaded to their servers. Use this feature at your own discretion</p>
 		</div>
 	</div>
 	
