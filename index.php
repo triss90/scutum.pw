@@ -19,7 +19,7 @@ include("_inc/header.php");
 	<div class="row">
 		
 		<div class="col tiny-12 medium-6">
-			<p>scutum.pw allows you to encrypt and transfer passwords and other sensitive data via a one-time link.<wbr> 
+			<p>scutum.pw allows you to encrypt and transfer passwords and other sensitive data via a one-time link. <wbr> 
 			The recipient can only view the page once, after which, the data is destroyed completely.</p>
 			<hr>
 			<h2>Encrypt</h2>
