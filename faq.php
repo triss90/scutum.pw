@@ -73,7 +73,7 @@ include("_inc/header.php");
 			<p>Is leakedpassword safe?</p>
 		</div>
 		<div class="col tiny-9 medium-9">
-			<p>You can reach out to <a href="https://triss.dev" target="_blank">Tristan White</a>, the creator and person responsible for maintaining this project.</p>
+			<p>Check you password or string agains leakedpassword does upload your data to their servers. Use this feature at your own discretion</p>
 		</div>
 	</div>
 	
