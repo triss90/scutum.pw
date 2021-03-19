@@ -23,7 +23,7 @@ $date = date("Y-m-d H:i:s");
 $app->DatabaseInsert("passwords", array('created','read_status','sjcl_json','slug'), array($date,0,$json,$slug));
 
 // Print result
-echo '<p>Your secure link:<br> <a href="//localhost:8888/view.php?p='.$slug.$key.'">https://localhost:8888/view.php?p='.$slug.$key.'</a></p>';
-echo '<p>Your raw link:<br> <a href="//localhost:8888/raw.php?p='.$slug.$key.'">https://localhost:8888/raw.php?p='.$slug.$key.'</a></p>';
+echo '<p>Your secure link:<br> <a href="//scutum.pw/view.php?p='.$slug.$key.'">https://scutum.pw/view.php?p='.$slug.$key.'</a></p>';
+echo '<p>Your raw link:<br> <a href="//scutum.pw/raw.php?p='.$slug.$key.'">https://scutum.pw/raw.php?p='.$slug.$key.'</a></p>';
 echo '<p><i>Be advised, the contents of the link above will be deleted after the first view!</i></p>';
 ?>
