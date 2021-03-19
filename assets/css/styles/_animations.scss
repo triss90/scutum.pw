@@ -1,0 +1,369 @@
+#funky::before {
+	content: "$ ";
+}
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes flash {
+		50% { opacity: 0; }
+	}
+	@keyframes reveal {
+		from { width: 2em; } /* Width of ::before */
+		  to { width: 100%; }
+	}
+	#funky {
+		overflow: hidden;
+		white-space: nowrap;
+		animation: reveal 4s linear;
+		text-overflow: "█";
+	}
+	#funky::after {
+		content: "█";
+		animation: flash 0.5s step-end infinite;
+	}
+}
+
+#loader {
+  animation: spin 1s linear infinite;
+  height: 6px;
+  width: 6px;
+  margin: 4rem auto;
+}
+
+@keyframes spin {
+  0% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  6.25% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  12.5% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  18.75% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  25% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  31.25% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  37.5% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+  43.75% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px var(--border-color), 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px transparent;
+  }
+  50% {
+	box-shadow: 
+	  0px -30px transparent, 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px var(--border-color), 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  56.25% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px transparent, 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px var(--border-color), 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  62.5% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px transparent, 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px var(--border-color), 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  68.75% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px transparent, 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px var(--border-color), 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  75% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px transparent, 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px var(--border-color), 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  81.25% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px transparent, 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px var(--border-color), 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  87.5% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px transparent, 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px var(--border-color),
+	  -10px -30px var(--border-color);
+  }
+  93.75% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px transparent, 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px var(--border-color);
+  }
+  100% {
+	box-shadow: 
+	  0px -30px var(--border-color), 
+	  10px -30px var(--border-color), 
+	  20px -20px var(--border-color), 
+	  30px -10px var(--border-color), 
+	  30px 0px var(--border-color), 
+	  30px 10px var(--border-color), 
+	  20px 20px var(--border-color), 
+	  10px 30px var(--border-color), 
+	  0px 30px transparent, 
+	  -10px 30px transparent, 
+	  -20px 20px transparent, 
+	  -30px 10px transparent, 
+	  -30px 0px transparent, 
+	  -30px -10px transparent, 
+	  -20px -20px transparent,
+	  -10px -30px transparent;
+  }
+}
+	
+#output {
+	display: none;
+	&.active {
+		display: block;
+	}
+}
+
+#loader {
+	display: none;
+	&.active {
+		display: block;
+	}
+}

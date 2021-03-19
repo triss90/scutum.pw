@@ -1,0 +1,54 @@
+html, body {
+	font-family: "courier new", monospace;
+	font-weight: 600;
+	word-wrap: break-word;
+	color: var(--font-color);
+}
+
+hr {
+	border-color: var(--border-color);
+	margin: 1rem 0;
+}
+
+h1 {
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	a {
+		color: var(--font-color);
+		&:hover {
+			color: var(--font-hightlight);
+		}
+	}
+}
+
+a {
+	color: var(--font-hightlight);
+	text-decoration: none;
+	font-weight: 900;
+	&:hover {
+		color: var(--font-hightlight-2);
+		.text-disabled {
+			color: var(--font-hightlight-2);
+		}
+	}
+}
+
+p {
+	&.alert {
+		background: var(--font-error);
+		color: var(--background-color);
+		a {
+			color: var(--font-color);
+			&:hover {
+				color: var('--background-color');
+			}
+		}
+	}
+	&.success {
+		background: var(--font-success);
+		color: var(--background-color);
+	}
+}
+.text-disabled {
+	color: var(--font-disabled);
+}

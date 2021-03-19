@@ -1,0 +1,39 @@
+body {
+	background: var(--background-color);
+}
+
+.col {
+	border: 6px double var(--border-color);
+	padding: 1em;
+  &.success {
+    border-color: var(--font-success);
+    color: var(--font-success);
+  }
+  &.error {
+    border-color: var(--font-error);
+    color: var(--font-error);
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  cursor: grab;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.1);
+  cursor: grab;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--font-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--font-hightlight);
+  
+}
