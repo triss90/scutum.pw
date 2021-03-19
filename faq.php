@@ -70,10 +70,10 @@ include("_inc/header.php");
 	
 	<div class="row">
 		<div class="col tiny-3 medium-3">
-			<p>Is leakedpassword safe?</p>
+			<p>Is <a href="https://leakedpassword.com">leakedpassword.com</a> safe?</p>
 		</div>
 		<div class="col tiny-9 medium-9">
-			<p>If you check your password or string against leakedpassword, it will be uploaded to their servers. Use this feature at your own discretion</p>
+			<p>If you check your password or string against <a href="https://leakedpassword.com">leakedpassword.com</a>, it will be uploaded to their servers. Use this feature at your own discretion</p>
 		</div>
 	</div>
 	
