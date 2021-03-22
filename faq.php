@@ -73,7 +73,7 @@ include("_inc/header.php");
 			<p>Is <a href="https://leakedpassword.com">leakedpassword.com</a> safe?</p>
 		</div>
 		<div class="col tiny-9 medium-9">
-			<p>If you check your password or string against <a href="https://leakedpassword.com">leakedpassword.com</a>, it will be uploaded to their servers. Use this feature at your own discretion</p>
+			<p>If you check your password or string against <a href="https://leakedpassword.com">leakedpassword.com</a>, it will be uploaded to their servers. Use this feature at your own discretion.</p>
 		</div>
 	</div>
 	
