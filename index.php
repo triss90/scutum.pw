@@ -52,7 +52,7 @@ include("_inc/header.php");
 			<p>Although we have no feasible way of accessing or reading your data, you still have to trust us with it. No matter how secure we have made our service, encryption in the browser is not perfect. <a href="/faq.php">Read the FAQ</a> to find out more.</p>
 			<hr>
 			<h2>collaboration</h2>
-			<p>We work closely with <a href="leadkedpassword.com">leakedpassword.com</a> to provide a simple test on the entered information. By accepting this, you accept sending your information to their servers. For more info on security, please visit their website.</p>
+			<p>We work closely with <a href="leadkedpassword.com">leakedpassword.com</a> to provide a simple test on the submitted information. By enabling this, you accept sending your information to their servers. For more info on security, please visit their website.</p>
 		</div>
 		
 	</div>
