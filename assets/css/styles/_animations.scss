@@ -14,6 +14,9 @@
 		white-space: nowrap;
 		animation: reveal 4s linear;
 		text-overflow: "█";
+		@media(max-width: 48em) {
+			font-size: 1.2rem;
+		}
 	}
 	#funky::after {
 		content: "█";

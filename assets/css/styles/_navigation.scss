@@ -11,7 +11,6 @@ nav {
 		padding: 1rem;
 		color: var(--background-color);
 	}
-	
 	ul {
 		margin: 0;
 		padding: 0;
@@ -26,6 +25,9 @@ nav {
 				height: 100%;
 				padding: 0.95rem;
 				color: var(--background-color);
+				@media(max-width: 48em) {
+					padding: 0.20rem;
+				}
 				&:hover {
 					color: var(--font-hightlight-2);
 				}
