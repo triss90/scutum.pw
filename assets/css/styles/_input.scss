@@ -1,56 +1,97 @@
 textarea,
-input[type=text],
-input[type=password] {
-	border: 3px solid var(--border-color);
-	padding: 1em;
-	width: 100%;
-	background: var(--background-color);
-	resize: none;
-	font-family: "courier new", monospace;
-	color: var(--font-color);
-	font-size: 1rem;
-	font-weight: 600;
-	&:focus {
-		outline: none;
-	}
+input[type="text"],
+input[type="password"] {
+  border: 3px solid var(--border-color);
+  padding: 1em;
+  width: 100%;
+  background: var(--background-color);
+  resize: none;
+  font-family: "courier new", monospace;
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: 600;
+  &:focus {
+    outline: none;
+  }
 }
 .checkbox {
   display: inline-block;
   margin: 0 0.5em 0 0;
   transition: all 100ms ease-in-out;
   input[type="checkbox"] {
-	display: none;
-	+ label.checkbox-label {
-	  position: relative;
-	  left: 0.35em;
-	  &:before {
-		position: relative;
-		left: -0.35em;
-		top: 0.25em;
-		content: '';
-		display: inline-block;
-		background: var(--background-color);
-		height: 1em;
-		width: 1em;
-		border: 3px solid var(--border-color);
-	  }
-	}
-	&:checked {
-	  + label.checkbox-label {
-		&:before {
-		  background: var(--border-color);
-		  box-shadow: inset 0 0 0 3px var(--background-color);
-		}
-	  }
-	}
-	&:disabled {
-	  + label.checkbox-label {
-		&:before {
-		  cursor: not-allowed;
-		  opacity: 0.5;
-		}
-	  }
-	}
+    display: none;
+    + label.checkbox-label {
+      position: relative;
+      left: 0.35em;
+      &:before {
+        position: relative;
+        left: -0.35em;
+        top: 0.25em;
+        content: "";
+        display: inline-block;
+        background: var(--background-color);
+        height: 1em;
+        width: 1em;
+        border: 3px solid var(--border-color);
+      }
+    }
+    &:checked {
+      + label.checkbox-label {
+        &:before {
+          background: var(--border-color);
+          box-shadow: inset 0 0 0 3px var(--background-color);
+        }
+      }
+    }
+    &:disabled {
+      + label.checkbox-label {
+        &:before {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+.radio {
+  display: inline-block;
+  margin: 0 0.5em 0 0;
+  transition: all 100ms ease-in-out;
+  input[type="radio"] {
+    display: none;
+    + label.radio-label {
+      position: relative;
+      left: 0.35em;
+      &:before {
+        position: relative;
+        left: -0.35em;
+        top: 0.25em;
+        border-radius: 50%;
+        content: "";
+        display: inline-block;
+        background: var(--background-color);
+        height: 1em;
+        width: 1em;
+        border: 3px solid var(--border-color);
+      }
+    }
+    &:checked {
+      + label.radio-label {
+        &:before {
+          background: var(--border-color);
+          box-shadow: inset 0 0 0 3px var(--background-color);
+        }
+      }
+    }
+    &:disabled {
+      + label.radio-label {
+        &:before {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+      }
+    }
   }
 }
 
@@ -58,72 +99,72 @@ input[type=password] {
   display: inline-block;
   vertical-align: middle;
   .checkbox-header-label {
-	position: relative;
-	display: inline-block;
-	height: 20px;
-	width: 44px;
-	background: var(--border-color-2);
-	border-radius: 100px;
-	cursor: pointer;
-	transition: all 300ms ease;
-	margin: 1rem;
-	&:after {
-	  position: absolute;
-	  left: -2px;
-	  top: -3px;
-	  display: block;
-	  width: 26px;
-	  height: 26px;
-	  border-radius: 100px;
-	  background: var(--font-hightlight);
-	  box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
-	  content: '';
-	  transition: all 300ms ease;
-	}
-	&:active:after {
-	  transform: scale(1.15, 0.85);
-	}
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 44px;
+    background: var(--border-color-2);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 300ms ease;
+    margin: 1rem;
+    &:after {
+      position: absolute;
+      left: -2px;
+      top: -3px;
+      display: block;
+      width: 26px;
+      height: 26px;
+      border-radius: 100px;
+      background: var(--font-hightlight);
+      box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
+      content: "";
+      transition: all 300ms ease;
+    }
+    &:active:after {
+      transform: scale(1.15, 0.85);
+    }
   }
   .checkbox-header-input {
-	display: none;
-	&:checked ~ label {
-	  background: var(--font-hightlight);
-	  &:after {
-		left: 20px;
-		background: var(--font-hightlight-2);
-	  }
-	}
-	&:disabled ~ label {
-	  background: var(--background-color);
-	  pointer-events: none;
-	  &:after {
-		background: var(--font-disabled);
-	  }
-	}
+    display: none;
+    &:checked ~ label {
+      background: var(--font-hightlight);
+      &:after {
+        left: 20px;
+        background: var(--font-hightlight-2);
+      }
+    }
+    &:disabled ~ label {
+      background: var(--background-color);
+      pointer-events: none;
+      &:after {
+        background: var(--font-disabled);
+      }
+    }
   }
 }
 
 button {
-	border: 3px solid var(--border-color);
-	padding: 1rem;
-	font-size: 1rem;
-	font-family: "courier new", monospace;
-	font-weight: 600;
-	color: var(--font-color);
-	background: var(--background-color);
-	cursor: pointer;
-	width: 100%;
-	&:hover {
-		border-color: var(--font-hightlight);
-		color: var(--font-hightlight);
-		border: 3px dashed var(--font-hightlight)
-	}
-	&:focus {
-		outline: none;
-	}
-	&.disabled {
-		border: 3px solid #666;
-		color: #666;
-		cursor: not-allowed;
-	}
+  border: 3px solid var(--border-color);
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "courier new", monospace;
+  font-weight: 600;
+  color: var(--font-color);
+  background: var(--background-color);
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    border-color: var(--font-hightlight);
+    color: var(--font-hightlight);
+    border: 3px dashed var(--font-hightlight);
+  }
+  &:focus {
+    outline: none;
+  }
+  &.disabled {
+    border: 3px solid #666;
+    color: #666;
+    cursor: not-allowed;
+  }
 }
