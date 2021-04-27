@@ -39,8 +39,10 @@ include("_inc/header.php");
 	<br>
 	<div class="row">
 		<div class="col tiny-12 medium-12">
-			<?php if ($pass['read_timer'] == "24") {?>
+			<?php if ($pass['read_timer'] == "24") { ?>
 				<p>This password expires: <span class="highlight"><?php echo $new_time; ?></span></p>
+			<?php } else if($pass['read_count'] <= $pass['read_limit']-1 && $pass['id'] != "") { ?>
+				<p>Views: <span class="highlight"><?php echo $pass['read_count']+1 . " / " . $pass['read_limit']; ?></span></p>
 			<?php } ?>
 			<div id="explain"></div>
 		</div>
