@@ -1,6 +1,6 @@
 <nav>
 	<div class="logo">
-		scutum.pw
+		<a href="/">scutum.pw</a>
 	</div>
 	<ul>
 		<li><a href="/">Home</a></li>
