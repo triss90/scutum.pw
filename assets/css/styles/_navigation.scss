@@ -9,7 +9,9 @@ nav {
 	.logo {
 		backgorund: red;
 		padding: 1rem;
-		color: var(--background-color);
+		a {
+			color: var(--background-color) !important;
+		}
 	}
 	ul {
 		margin: 0;
