@@ -7,10 +7,17 @@ $siteTitle = "scutum.pw | View";
 $p = $_GET['p'];
 $slug = substr($p, 0, 8);
 $key = substr($p, 8, 64);
-$pass = $app->DatabasePrepareQueryReturnFirstField("SELECT * FROM passwords WHERE slug = ?", array($slug));
+$pass = $app->DatabasePrepareQueryReturnFirstField("SELECT * FROM passwords WHERE slug = ?",[$slug]);
+$new_read_count = $pass['read_count']+1;
+$app->DatabaseUpdate("passwords", array('read_count'), array($new_read_count, $slug), "WHERE slug = ?" );
+
+$new_time = date('Y-m-d H:i:s', strtotime('+24 hour',strtotime($pass['created'])));
 
 // Delete data
-$app->DatabaseDelete( "passwords", "WHERE slug = ?", array($slug));
+if ($pass['read_count'] >= $pass['read_limit']-1 && $pass['read_timer'] != 24) {
+	$app->DatabaseUpdate("passwords", array('read_status'), array(1, $slug), "WHERE slug = ?" );
+	$app->DatabaseDelete("passwords", "WHERE slug = ?", [$slug]);
+}
 
 include("_inc/header.php");
 ?>
@@ -24,7 +31,7 @@ include("_inc/header.php");
 	</div>
 	
 	<div class="row">
-		<h3>Here is your decrypted string:</h3>
+		<h3>Here is your decrypted string:</h3><br>
 		<div class="col tiny-12 medium-12" id="col">
 			<div id="output" class="active"></div>
 		</div>
@@ -32,6 +39,9 @@ include("_inc/header.php");
 	<br>
 	<div class="row">
 		<div class="col tiny-12 medium-12">
+			<?php if ($pass['read_timer'] == "24") {?>
+				<p>This password expires: <span class="highlight"><?php echo $new_time; ?></span></p>
+			<?php } ?>
 			<div id="explain"></div>
 		</div>
 	</div>

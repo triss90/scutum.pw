@@ -1,14 +1,14 @@
 <?php
-include("_inc/_functions.php");
+include "_inc/_functions.php";
 $key = generateRandomString(64);
 $siteTitle = "scutum.pw";
 
-include("_inc/header.php");
+include "_inc/header.php";
 ?>
 
 <div class="container">
 	
-	<?php include("_inc/navigation.php"); ?>
+	<?php include "_inc/navigation.php"; ?>
 	
 	<div class="row center-tiny start-medium">
 		<h1 id="funky"><a href="/">Welcome to scutum.pw</a></h1>
@@ -31,7 +31,27 @@ include("_inc/header.php");
 				<div class="checkbox">
 					<input type="checkbox" id="leakedpassword" name="leakedpassword" value="1" />
 					<label for="leakedpassword" class="checkbox-label">Test password with <a href="leakedpassword.com">leakedpassword.com</a></label>
-				</div>				
+				</div>
+				
+				<br><br>
+				
+				<strong>Expiry:</strong><br>
+				<div class="radio">
+					<input type="radio" id="1" name="expiry" checked value="1" />
+					<label for="1" class="radio-label">1 view</label>
+				</div><br>
+				<div class="radio">
+					<input type="radio" id="5" name="expiry" value="5" />
+					<label for="5" class="radio-label">5 views</label>
+				</div><br>
+				<div class="radio">
+					<input type="radio" id="10" name="expiry" value="10" />
+					<label for="10" class="radio-label">10 views</label>
+				</div><br>
+				<div class="radio">
+					<input type="radio" id="24" name="expiry" value="24" />
+					<label for="24" class="radio-label">24 hours</label>
+				</div><br>		
 				<br><br>
 				<button id="encrypt" type="submit">Generate secure link</button><br><br>
 			</form>
@@ -78,7 +98,7 @@ include("_inc/header.php");
 		var form = $(this);
 		var url = form.attr('action');
 		var customString = document.getElementById('string').value;
-		var encrypted = sjcl.encrypt("<?php echo $key ?>", customString);
+		var encrypted = sjcl.encrypt("<?php echo $key; ?>", customString);
 		$("#json").val(encrypted);
 		$.ajax({
 			type: "POST",
@@ -106,5 +126,5 @@ include("_inc/header.php");
 	});
 </script>
 
-<?php include("_inc/footer.php"); ?>
-
+<?php include "_inc/footer.php";
+?>

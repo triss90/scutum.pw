@@ -1,16 +1,21 @@
 <?php
-include("_inc/_app.php");
-$app = new Password;
+include "_inc/_app.php";
+$app = new Password();
 $siteTitle = "scutum.pw | Raw data";
 
 // Get encrypted JSON from DB
-$p = $_GET['p'];
+$p = $_GET["p"];
 $slug = substr($p, 0, 8);
 $key = substr($p, 8, 64);
-$pass = $app->DatabasePrepareQueryReturnFirstField("SELECT * FROM passwords WHERE slug = ?", array($slug));
+$pass = $app->DatabasePrepareQueryReturnFirstField("SELECT * FROM passwords WHERE slug = ?",[$slug]);
+$new_read_count = $pass['read_count']+1;
+$app->DatabaseUpdate("passwords", array('read_count'), array($new_read_count, $slug), "WHERE slug = ?" );
 
 // Delete data
-$app->DatabaseDelete( "passwords", "WHERE slug = ?", array($slug));
+if ($pass['read_count'] >= $pass['read_limit']-1 && $pass['read_timer'] != 24) {
+	$app->DatabaseUpdate("passwords", array('read_status'), array(1, $slug), "WHERE slug = ?" );
+	$app->DatabaseDelete("passwords", "WHERE slug = ?", [$slug]);
+}
 ?>
 
 <script type="text/javascript" src="/assets/js/sjcl.js"></script>
@@ -18,8 +23,7 @@ $app->DatabaseDelete( "passwords", "WHERE slug = ?", array($slug));
 
 <h3>Decrypted string: <span id="output" class="active"></span></h3>
 
-
-<?php if ($pass['read_status'] == 1 || $pass['read_status'] == "") { ?>
+<?php if ($pass["read_status"] == 1 || $pass["read_status"] == "") { ?>
 	<script>
 		var output = document.getElementById('output');
 		output.innerHTML += '<span style="color:red;">This string does not exist!</span>';
@@ -27,7 +31,6 @@ $app->DatabaseDelete( "passwords", "WHERE slug = ?", array($slug));
 <?php } else { ?>
 	<script>
 		var output = document.getElementById('output');
-		output.innerHTML = '<span style="color:green">' + sjcl.decrypt('<?php echo $key ?>', '<?php echo $pass['sjcl_json']; ?>')+ '</span>';
+		output.innerHTML = '<span style="color:green">' + sjcl.decrypt('<?php echo $key; ?>', '<?php echo $pass[ "sjcl_json"]; ?>')+ '</span>';
 	</script>
 <?php } ?>
- 
