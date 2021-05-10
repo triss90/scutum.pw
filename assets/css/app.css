@@ -145,7 +145,7 @@ nav .logo {
   padding: 1rem;
 }
 nav .logo a {
-  color: var(--background-color);
+  color: var(--background-color) !important;
 }
 nav ul {
   margin: 0;
