@@ -167,4 +167,29 @@ button {
     color: #666;
     cursor: not-allowed;
   }
+  &.copy {
+    border: none;
+    //background: red;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    bottom: -4px;
+    display: inline;
+    width: auto;
+    &:hover {
+      border: none;
+      svg {
+        path {
+          fill: var(--font-hightlight);
+        }
+      }
+    }
+    svg {
+      width: 1rem;
+      height: 1rem;
+      path {
+        fill: var(--font-color);
+      }
+    }
+  }
 }

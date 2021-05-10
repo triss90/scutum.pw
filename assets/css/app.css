@@ -441,5 +441,27 @@ button.disabled {
   color: #666;
   cursor: not-allowed;
 }
+button.copy {
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  bottom: -4px;
+  display: inline;
+  width: auto;
+}
+button.copy:hover {
+  border: none;
+}
+button.copy:hover svg path {
+  fill: var(--font-hightlight);
+}
+button.copy svg {
+  width: 1rem;
+  height: 1rem;
+}
+button.copy svg path {
+  fill: var(--font-color);
+}
 
 /*# sourceMappingURL=app.css.map */

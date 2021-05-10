@@ -55,6 +55,8 @@ include "_inc/header.php";
 				<br><br>
 				<button id="encrypt" type="submit">Generate secure link</button><br><br>
 			</form>
+			
+
 			<hr>
 			<div id="loader"></div>
 			<div id="output"></div>
@@ -94,6 +96,7 @@ include "_inc/header.php";
 				}
 			});
 		}
+		
 		// Post form
 		var form = $(this);
 		var url = form.attr('action');
@@ -124,7 +127,7 @@ include "_inc/header.php";
 			}
 		});
 	});
+	
 </script>
 
-<?php include "_inc/footer.php";
-?>
+<?php include "_inc/footer.php";?>
