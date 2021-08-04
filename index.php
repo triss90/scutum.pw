@@ -30,7 +30,7 @@ include "_inc/header.php";
 				<input type="hidden" name="json" id="json" required value="test"></input>
 				<div class="checkbox">
 					<input type="checkbox" id="leakedpassword" name="leakedpassword" value="1" />
-					<label for="leakedpassword" class="checkbox-label">Test password with <a href="leakedpassword.com">leakedpassword.com</a></label>
+					<label for="leakedpassword" class="checkbox-label">Test password with <a href="https://leakedpassword.com">leakedpassword.com</a></label>
 				</div>
 				
 				<br><br>
